@@ -13,10 +13,12 @@ public class DeckTest {
 		int a = 0;
 		Deck d = new Deck(1);
 		for (int i = 0; i < 53; i++) {
-			if (d.draw() == null) {
-				assertTrue(a == 52);
-			} else {
+			try {
+				d.draw();
 				a++;
+			}
+			catch (IndexOutOfBoundsException e){
+				assertTrue(a == 52);
 			}
 		}
 
@@ -24,10 +26,12 @@ public class DeckTest {
 		int b = 0;
 		Deck c = new Deck(6);
 		for (int i = 0; i < 313; i++) {
-			if (c.draw() == null) {
-				assertTrue(b == 312);
-			} else {
+			try {
+				c.draw();
 				b++;
+			}
+			catch (IndexOutOfBoundsException e) {
+				assertTrue(b == 312);
 			}
 		}
 

@@ -37,7 +37,22 @@ public class Hand {
 				break;
 			}
 		}
-		
+		// highest number under 22 gets placed in index 0 of iScore
+		if (iScore[0] == 21) {
+			
+		} else if (iScore[1] == 21) {
+			int a = iScore[1];
+			iScore [1] = iScore[0];
+			iScore[0] = a;
+		} else if (iScore[0] < iScore[1]) {
+			if (iScore[1] > 21) {
+				
+			} else {
+				int a = iScore[1];
+				iScore [1] = iScore[0];
+				iScore[0] = a;
+			}
+		}
 		return iScore;
 	}
 

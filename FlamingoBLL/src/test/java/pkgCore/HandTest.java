@@ -129,8 +129,8 @@ public class HandTest {
 		cards.add(new Card(eSuit.CLUBS, eRank.ACE));
 
 		int[] score = HandHelper(cards);
-		assertEquals(score[0], 11);
-		assertEquals(score[1], 21);
+		assertEquals(score[0], 21);
+		assertEquals(score[1], 11);
 	}
 
 	@Test
@@ -176,8 +176,8 @@ public class HandTest {
 		cards.add(new Card(eSuit.CLUBS, eRank.TWO));
 
 		int[] score = HandHelper(cards);
-		assertEquals(score[0], 6);
-		assertEquals(score[1], 16);
+		assertEquals(score[0], 16);
+		assertEquals(score[1], 6);
 
 	}
 
