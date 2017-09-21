@@ -12,10 +12,10 @@ public class Roll {
 		setScore(d1.getDieValue() + d2.getDieValue());
 	}
 
-	private void setScore(int Score)
-	{
+	private void setScore(int Score) {
 		this.Score = Score;
 	}
+
 	public int getScore() {
 		return Score;
 	}

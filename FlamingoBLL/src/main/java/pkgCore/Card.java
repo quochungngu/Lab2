@@ -1,36 +1,42 @@
 package pkgCore;
+
 import pkgEnum.*;
+
 public class Card implements Comparable {
 
-	private int eRank;
-	private Suit eSuit;
+	private eRank eRank;
+	private eSuit eSuit;
+
 	
-	public Card(int eRank, Suit eSuit) {
-		this.eRank = eRank;
-		this.eSuit = eSuit;
+	public Card(eSuit Suit, eRank Rank) {
+		seteRank(Rank);
+		seteSuit(Suit);
 	}
-	 
-	public int getERank() {
+
+	public Card() {
+
+	}
+
+
+	public eRank geteRank() {
 		return eRank;
 	}
-	public Suit getESuit() {
+
+	private void seteRank(eRank Rank) {
+		eRank = Rank;
+	}
+
+	public eSuit geteSuit() {
 		return eSuit;
 	}
 
-	private void setERank(int eRank) {
-		this.eRank;
-		
+	private void seteSuit(eSuit Suit) {
+		eSuit = Suit;
 	}
-	private void setESuit(Suit eSuit) {
-		this.eSuit;
-		
-	}
-	
+
 	@Override
 	public int compareTo(Object o) {
 		Card c = (Card) o;
 		return c.geteRank().compareTo(this.geteRank());
-
-}
-	
+	}
 }
